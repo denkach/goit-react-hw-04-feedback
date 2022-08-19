@@ -6,7 +6,9 @@ export const FeedbackList = styled.ul`
   margin-bottom: 12px;
   display: flex;
   list-style: none;
+`;
 
+export const FeedbackItem = styled.li`
   :not(:last-child) {
     margin-right: 8px;
   }
