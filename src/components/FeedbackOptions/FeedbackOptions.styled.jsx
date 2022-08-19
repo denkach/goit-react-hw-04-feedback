@@ -5,6 +5,9 @@ export const FeedbackList = styled.ul`
   padding: 0;
   margin-bottom: 12px;
   display: flex;
-  gap: 8px;
   list-style: none;
+
+  :not(:last-child) {
+    margin-right: 8px;
+  }
 `;
