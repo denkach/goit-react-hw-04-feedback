@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const FeedbackList = styled.ul`
   margin: 0;
   padding: 0;
-  margin-top: 12px;
+  margin-bottom: 12px;
   display: flex;
-  gap: 4px;
+  gap: 8px;
   list-style: none;
 `;

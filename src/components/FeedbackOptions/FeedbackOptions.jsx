@@ -9,23 +9,20 @@ export class FeedbackOptions extends Component {
   };
 
   render() {
-    const { onClick } = this.props;
+    const { options, onLeaveFeedback } = this.props;
 
     return (
-      <div>
-        <h2>Please leave feedback</h2>
-        <FeedbackList>
-          <li>
-            <Button name="good" onBtnClick={onClick} emoji="👍🏼"></Button>
-          </li>
-          <li>
-            <Button name="neutral" onBtnClick={onClick} emoji="😐"></Button>
-          </li>
-          <li>
-            <Button name="bad" onBtnClick={onClick} emoji="👎🏼"></Button>
-          </li>
-        </FeedbackList>
-      </div>
+      <FeedbackList>
+        {options.map((name, index) => {
+          return (
+            <li key={index}>
+              <Button name={name} onBtnClick={onLeaveFeedback}>
+                {name}
+              </Button>
+            </li>
+          );
+        })}
+      </FeedbackList>
     );
   }
 }

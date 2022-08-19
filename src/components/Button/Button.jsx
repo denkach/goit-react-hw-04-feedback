@@ -9,11 +9,16 @@ export class Button extends Component {
   };
 
   render() {
-    const { name, onBtnClick, emoji } = this.props;
+    const { name, onBtnClick } = this.props;
     return (
       <FeedbackButton name={name} onClick={() => onBtnClick(name)}>
-        {name} {emoji}
+        {name}
       </FeedbackButton>
     );
   }
 }
+
+Button.propTypes = {
+  name: PropTypes.string.isRequired,
+  onBtnClick: PropTypes.func.isRequired,
+};
